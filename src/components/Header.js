@@ -1,5 +1,6 @@
-import { Button, Container, Form, FormControl, Nav, Navbar } from 'react-bootstrap';
+import { Container, Form, FormControl, Nav, Navbar } from 'react-bootstrap';
 import { AiOutlineSearch } from 'react-icons/ai';
+import { NavLink } from 'react-router-dom';
 
 const Header = () => (
   <header className="border-bottom">
@@ -16,8 +17,8 @@ const Header = () => (
             <AiOutlineSearch className="fs-1" />
             <FormControl type="search" placeholder="Search" className="me-2" aria-label="Search" />
           </Form>
-          <Button variant="outline-info">Sign in</Button>
-          <Button variant="outline-info">Sign up</Button>
+          <NavLink to="/signin" className="px-2">Sign in</NavLink>
+          <NavLink to="/signup" variant="outline-info">Sign up</NavLink>
         </Navbar.Collapse>
       </Container>
     </Navbar>
